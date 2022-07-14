@@ -47,7 +47,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         clients.inMemory().withClient(env.getProperty("config.security.oauth.client.id")).secret(passwordEncoder.encode(env.getProperty("config.security.oauth.client.secret")))
                 .scopes("read","write")
                 .authorizedGrantTypes("password","refresh_token")
-                .accessTokenValiditySeconds(36000).refreshTokenValiditySeconds(36000);
+                .accessTokenValiditySeconds(35000).refreshTokenValiditySeconds(35000);
     }
 
     @Override
